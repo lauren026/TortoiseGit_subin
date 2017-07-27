@@ -135,7 +135,9 @@ void gugudan_7() {
 
 void shooting_star() {
 	int number = 0, i, j;
-	number = rand() % 11 + 1;
+
+	printf("input number?\n");
+	scanf("%d", &number);
 
 	for (i = 0; i < number; i++) {
 		for (j = 0; j < i + 1; j++) {
