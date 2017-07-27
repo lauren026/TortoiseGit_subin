@@ -15,19 +15,22 @@ void gugudan_5();
 void gugudan_6();
 void gugudan_7();
 
+void shooting_star();
 
 
 int main() {
 	int choice;
 	
 	printf("choose one. \n");
-	printf("1. rules of multiplication \n");
+	printf("1. rules of multiplication \n2. shooting star \n");
 	scanf("%d", &choice);
 
 	if (choice == 1) {
 		gugudan();
 	}
-
+	else if (choice == 2) {
+		shooting_star();
+	}
 
 	else
 		printf("input error \n");
@@ -130,3 +133,14 @@ void gugudan_7() {
 	}
 }
 
+void shooting_star() {
+	int number = 0, i, j;
+	number = rand() % 11 + 1;
+
+	for (i = 0; i < number; i++) {
+		for (j = 0; j < i + 1; j++) {
+			printf("*");
+		}
+		printf("\n");
+	}
+}
