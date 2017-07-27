@@ -12,11 +12,7 @@ void gugudan_2();
 void gugudan_3();
 void gugudan_4();
 void gugudan_5();
-void gugudan_6();
-void gugudan_7();
-void gugudan_8();
-void shooting_star();
-void gugudan_9();
+
 
 
 
@@ -24,14 +20,11 @@ int main() {
 	int choice;
 	
 	printf("choose one. \n");
-	printf("1. rules of multiplication \n2. shooting star \n");
+	printf("1. rules of multiplication \n");
 	scanf("%d", &choice);
 
 	if (choice == 1) {
 		gugudan();
-	}
-	else if (choice == 2) {
-		shooting_star();
 	}
 
 	else
@@ -52,11 +45,6 @@ void gugudan() {
 	case 3:gugudan_3(); break;
 	case 4:gugudan_4(); break;
 	case 5:gugudan_5(); break;
-	case 6:gugudan_6(); break;
-	case 7:gugudan_7(); break;
-	case 8:gugudan_8(); break;
-	case 9:gugudan_9(); break;
-
 	}
 }
 
@@ -115,57 +103,3 @@ void gugudan_5() {
 	}
 }
 
-void gugudan_6() {
-	int i;
-	int j;
-	for (i = 1; i < 7; i++) {
-		for (j = 1; j < 10; j++) {
-			printf("%d x %d = %d\n", i, j, i*j);
-		}
-		printf("\n");
-	}
-}
-
-void gugudan_7() {
-	int i;
-	int j;
-	for (i = 1; i < 8; i++) {
-		for (j = 1; j < 10; j++) {
-			printf("%d x %d = %d\n", i, j, i*j);
-		}
-		printf("\n");
-	}
-}
-
-void gugudan_8() {
-	int i;
-	int j;
-	for (i = 1; i < 9; i++) {
-		for (j = 1; j < 10; j++) {
-			printf("%d x %d = %d\n", i, j, i*j);
-		}
-		printf("\n");
-	}
-}
-
-void gugudan_9() {
-	int i;
-	int j;
-	for (i = 1; i < 10; i++) {
-		for (j = 1; j < 10; j++) {
-			printf("%d x %d = %d\n", i, j, i*j);
-		}
-		printf("\n");
-	}
-}
-void shooting_star() {
-	int number = 0, i, j;
-	number = rand() % 11 + 1;
-
-	for (i = 0; i < number; i++) {
-		for (j = 0; j < i + 1; j++) {
-			printf("*");
-		}
-		printf("\n");
-	}
-}
